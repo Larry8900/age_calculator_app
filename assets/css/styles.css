@@ -1,0 +1,304 @@
+
+form{
+    display: inline-flex;
+
+}
+main {
+    font-family: poppins;
+}
+body{
+    background-color: hsl(0, 0%, 94%);
+    padding: 80px;
+}
+.container{
+    background-color:hsl(0, 0%, 100%);
+    padding: 20px;
+    height: 400px;
+    margin-top: 100px;
+    border-radius: 10px 10px 150px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 500px;
+}
+.error-label{
+    color: red;
+}
+.error-Active{
+    border: 2px solid red;
+    display: flex-inline;
+}
+#error_month{
+    display: block;
+    color: red;
+}
+#error_day{
+    color: red;
+    display: block;
+}
+#error_year{
+    display: block;
+    color: red;
+}
+.input_field{
+    display: inline-flex;
+    padding: 20px;
+}
+.day{
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight:550 ;
+}
+.day input{
+    font-size: 20px;
+    padding: 2px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid rgb(218, 213, 213);
+}
+.month{
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight:550 ;
+}
+.month input{
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 2px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid rgb(218, 213, 213);
+}
+.year{
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight:550 ;
+   /* width: 80px; */
+}
+.year input{
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid rgb(218, 213, 213);
+}
+
+.calculate-btn{
+  display: inline;
+  position: relative;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 55%;
+  padding: 10px;
+  float: right;
+  margin-top: -40px;
+  position: static;
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes glow {
+    0% {padding: 10px;}
+    50% {padding: 8px;
+        box-shadow: inset 1px 1px  1px 3px  hsl(259, 81%, 60%) ;
+    }
+    70%{
+        box-shadow: inset 1px 1px  1px 3px  hsl(259, 66%, 69%);
+    }
+    100% {padding: 13px;
+        box-shadow:inset 1px 1px  1px 3px  hsl(260, 58%, 86%) ;
+    }
+}
+
+
+.calculate-btn img{
+    height: 20px;
+    width: 20px;
+    position:inherit;
+}
+.display_field{
+    display: block;
+    padding-left: 10px;
+    position:absolute;
+}
+.output_years{
+    display: inline-flex;
+}
+.show_years{
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: -5px;
+}
+.display_field > h3{
+    color: black;
+    font-weight: 900;
+    font-size: 50px;
+    padding-left: 10px;
+}
+.output_months{
+    display: inline-flex;
+}
+.show_months{
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: -5px;
+}
+.output_days{
+    display: inline-flex;
+}
+.show_days{
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: -5px;
+}
+@media (max-width:414px ){
+    .container{
+        max-width:fit-content;
+    }
+    body{
+        padding: 10px;
+    }
+    .day, .month, .year{
+        padding-top: 15px;
+        font-size: 12px;
+        font-weight:550 ;
+        width: 5.5rem;
+    }
+    hr{
+        margin-top: 50px;
+    }
+    
+    .input_field{
+        display: inline-flex;
+        padding: 10px;
+        max-width:fit-content;
+    }
+    .calculate-btn{
+        display: inline;
+        margin-top: -40px;
+        padding: 20px;
+        left: 45%;
+        position: absolute;
+        animation-name: glow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    .calculate-btn img{
+        height: 20px;
+        width: 20px;
+        position:relative;
+    }
+    .display_field{
+        padding: 10px;
+        width:fit-content;
+        max-height: 80px;
+        margin-top: 30px;
+    }
+    .output_days{
+        font-size: 500;
+        font-size: 20px;
+    }
+    .container{
+        height: 550px;
+        margin-top: 20px;
+    }
+    .output_years{
+        display: inline-flex;
+    }
+    .show_years{
+        font-weight: 700;
+        font-size: 30px;
+        margin-top: 5px;
+        color: hsl(259, 100%, 65%);
+    }
+    .display_field h3{
+        color: black;
+        font-weight: 900;
+        font-size: 40px;
+        margin-top: 5px;
+        left: -30px;
+    }
+    .display_field span {
+        font-weight: 900;
+        font-size: 40px;
+        margin-top: 5px;
+        color: hsl(259, 100%, 65%);
+        font-style: italic;
+        padding: 0px;
+    }
+}
+@media (min-width:420px ){
+    .container{
+        max-width:300px;
+        height: 500px;
+    }
+    hr{
+        margin-top: 50px;
+    }
+    
+    .input_field{
+        display: inline-flex;
+        padding: 10px;
+        max-width:fit-content;
+    }
+    .day, .month, .year{
+        padding-top: 15px;
+        font-size: 12px;
+        font-weight:550 ;
+        width: 5rem;
+    }
+    .calculate-btn{
+        display: inline;
+        margin-top: -40px;
+        padding: 20px;
+        float: right;
+        position: relative;
+    }
+    .calculate-btn img{
+        height: 20px;
+        width: 20px;
+        position:relative;
+    }
+    .display_field{
+        padding: 10px;
+        width:fit-content;
+        margin-top: 30px;
+    }
+    .output_days{
+        font-size: 500;
+        font-size: 20px;
+    }
+    .container{
+        height: 550px;
+        margin-top: 20px;
+    }
+    .output_years{
+        display: inline-flex;
+    }
+    .show_years{
+        font-weight: 700;
+        font-size: 30px;
+        margin-top: 5px;
+        color: hsl(259, 100%, 65%);
+    }
+    .display_field h3{
+        color: black;
+        font-weight: 900;
+        font-size: 40px;
+        margin-top: 5px;
+        position: relative;
+        right: 5rem;
+    }
+    .display_field span {
+        font-weight: 900;
+        font-size: 40px;
+        margin-top: 5px;
+        color: hsl(259, 100%, 65%);
+        font-style: italic;
+        padding: 0px;
+    }
+
+
+
+
+
+}
